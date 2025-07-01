@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button.jsx'
 import { Card, CardContent } from '@/components/ui/card.jsx'
-import { Menu, X, Phone, MessageCircle, Users, DollarSign, Building2, Zap, Play, Mail, Instagram, Youtube } from 'lucide-react'
+import { Menu, X, Phone, MessageCircle, Users, DollarSign, Building2, Zap, Play, Mail, Instagram, Youtube, CheckCircle, CreditCard } from 'lucide-react'
 import './App.css'
 
 // Importar assets
@@ -57,6 +57,9 @@ function App() {
               <button onClick={() => scrollToSection('videos')} className="text-gray-700 hover:text-primary transition-colors">
                 Vídeos
               </button>
+              <button onClick={() => scrollToSection('planos')} className="text-gray-700 hover:text-primary transition-colors">
+                Planos
+              </button>
               <button onClick={() => scrollToSection('sobre')} className="text-gray-700 hover:text-primary transition-colors">
                 Sobre
               </button>
@@ -85,6 +88,9 @@ function App() {
                 </button>
                 <button onClick={() => scrollToSection('videos')} className="block px-3 py-2 text-gray-700 hover:text-primary">
                   Vídeos
+                </button>
+                <button onClick={() => scrollToSection('planos')} className="block px-3 py-2 text-gray-700 hover:text-primary">
+                  Planos
                 </button>
                 <button onClick={() => scrollToSection('sobre')} className="block px-3 py-2 text-gray-700 hover:text-primary">
                   Sobre
@@ -289,8 +295,140 @@ function App() {
         </div>
       </section>
 
+      {/* Seção de Planos e Preços */}
+      <section id="planos" className="section-padding bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              👉 Contrate agora sua contabilidade com a <span className="evolua-green">Evolua</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transparência, praticidade e preço justo para o seu negócio.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            {/* Plano MEI */}
+            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-evolua-green">
+              <CardContent className="p-8 text-center space-y-6">
+                <div className="w-20 h-20 mx-auto bg-evolua-green/10 rounded-full flex items-center justify-center">
+                  <Users className="w-10 h-10 evolua-green" />
+                </div>
+                
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-gray-900">Empresas MEI</h3>
+                  <p className="text-gray-600">Ideal para microempreendedores individuais</p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold evolua-green">R$ 90</div>
+                    <div className="text-gray-500">/mês</div>
+                  </div>
+                  
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Declaração anual MEI</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Suporte via WhatsApp</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Atendimento 100% online</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Consultoria básica</span>
+                    </div>
+                  </div>
+                  
+                  {/* Botão específico para MEI */}
+                  <div className="pt-4">
+                    <Button 
+                      className="w-full bg-evolua-green hover:bg-evolua-green-dark text-white py-3 font-semibold"
+                      onClick={() => window.open('https://ozwmjrkc.manus.space', '_blank')}
+                    >
+                      <CreditCard className="mr-2 h-5 w-5" />
+                      Contratar MEI
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Plano Simples Nacional */}
+            <Card className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-evolua-green">
+              <div className="absolute top-0 right-0 bg-evolua-green text-white px-4 py-2 text-sm font-semibold">
+                Mais Popular
+              </div>
+              <CardContent className="p-8 text-center space-y-6">
+                <div className="w-20 h-20 mx-auto bg-evolua-green/10 rounded-full flex items-center justify-center">
+                  <Building2 className="w-10 h-10 evolua-green" />
+                </div>
+                
+                <div className="space-y-2">
+                  <h3 className="text-2xl font-bold text-gray-900">Simples Nacional</h3>
+                  <p className="text-gray-600 text-sm">Prestadora de serviço, 1 nota/mês, sem funcionários e sem pró-labore</p>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold evolua-green">R$ 179</div>
+                    <div className="text-gray-500">/mês</div>
+                  </div>
+                  
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Escrituração contábil completa</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Declarações obrigatórias</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Suporte via plataforma e WhatsApp</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Consultoria especializada</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 evolua-green flex-shrink-0" />
+                      <span className="text-gray-700">Relatórios gerenciais</span>
+                    </div>
+                  </div>
+                  
+                  {/* Botão específico para Simples Nacional */}
+                  <div className="pt-4">
+                    <Button 
+                      className="w-full bg-evolua-green hover:bg-evolua-green-dark text-white py-3 font-semibold"
+                      onClick={() => window.open(atendimentoLink, '_blank')}
+                    >
+                      <CreditCard className="mr-2 h-5 w-5" />
+                      Contratar Simples Nacional
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Informações adicionais */}
+          <div className="text-center">
+            <p className="text-gray-600 text-sm">
+              Sem taxa de adesão • Sem fidelidade • Cancele quando quiser
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Sobre a Evolua */}
-      <section id="sobre" className="section-padding bg-gray-50">
+      <section id="sobre" className="section-padding">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
