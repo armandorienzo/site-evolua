@@ -4,40 +4,5 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ],
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        { 
-          "key": "Access-Control-Allow-Origin", 
-          "value": "https://www.evoluafinance.com" 
-        },
-        { 
-          "key": "Access-Control-Allow-Methods", 
-          "value": "GET, POST, PUT, DELETE, OPTIONS" 
-        },
-        { 
-          "key": "Access-Control-Allow-Headers", 
-          "value": "Content-Type, Authorization, X-Site-Domain" 
-        }
-      ]
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "VITE_SITE_DOMAIN": "www.evoluafinance.com",
-    "VITE_SITE_NAME": "Evolua Finance"
-  },
-  "build": {
-    "env": {
-      "NODE_ENV": "production"
-    }
-  },
-  "functions": {
-    "app/api/**/*.js": {
-      "maxDuration": 30
-    }
-  }
+  ]
 }
-
