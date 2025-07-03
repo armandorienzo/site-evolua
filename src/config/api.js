@@ -2,7 +2,7 @@
 
 // URL base da API - configurada para o domínio correto
 const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'evoluafinance-api-backend-production.up.railway.app'  // URL do backend em produção (ajustar conforme deploy)
+  ? 'https://evoluafinance-api-backend-production.up.railway.app'  // ✅ URL do backend em produção
   : 'http://localhost:5000'           // URL local para desenvolvimento
 
 // Configuração específica para evoluafinance.com
