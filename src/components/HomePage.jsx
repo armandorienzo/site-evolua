@@ -29,7 +29,7 @@ function HomePage() {
   }
 
   const whatsappLink = "https://wa.me/5511971667554"
-  const atendimentoLink = "#" // Será fornecido pelo usuário
+  const atendimentoLink = "https://visao.gclick.com.br/evolua" // Link atualizado conforme solicitado
 
   return (
     <div className="min-h-screen bg-background">
@@ -125,7 +125,7 @@ function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  <a href={atendimentoLink} className="flex items-center">
+                  <a href={atendimentoLink} target="_blank" rel="noopener noreferrer" className="flex items-center">
                     <MessageCircle className="mr-2 h-5 w-5" />
                     Acessar Atendimento
                   </a>
@@ -480,7 +480,7 @@ function HomePage() {
                 <h3 className="text-xl font-semibold mb-2">Plataforma</h3>
                 <p className="text-gray-600 mb-4">Sistema de chamados</p>
                 <Button variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                  <a href={atendimentoLink}>
+                  <a href={atendimentoLink} target="_blank" rel="noopener noreferrer">
                     Acessar Plataforma
                   </a>
                 </Button>
@@ -553,4 +553,3 @@ function HomePage() {
 }
 
 export default HomePage
-
